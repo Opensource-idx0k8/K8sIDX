@@ -6,6 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+dioxus = "0.4.0"
+dioxus-desktop = "0.4.0"
 
 [target.x86_64-unknown-linux-gnu]
 rustflags = ["-C", "linker=clang", "-C", "link-arg=-fuse-ld=lld"]
