@@ -8,14 +8,23 @@ edition = "2021"
 [dependencies]
 dioxus = "0.4.0"
 dioxus-desktop = "0.4.0"
+# Rust client for Kubernetes
 kube = { version = "0.85.0", features = ["runtime", "derive"] }
+# Rust bindings for kubernetes client API
 k8s-openapi = { version = "0.19.0", features = ["latest"] }
+# For async Rust
 tokio = { version = "1", features = ["full"] }
+# Framework for instrumenting Rust to collect structured diagnostic info
 tracing = "0.1.36"
-serde = { version = "1.0.130", features = ["derive"] }
-serde_json = "1.0.68"
-serde_yaml = "0.9.19"
+# Utilities for composing tracing
 tracing-subscriber = "0.3.3"
+# Serialize and Deserialize Rust data structures
+serde = { version = "1.0.130", features = ["derive"] }
+# Serde for JSON
+serde_json = "1.0.68"
+# Serde for YAML
+serde_yaml = "0.9.19"
+# Provides a trait based error type for easy error handling
 anyhow = "1.0.44"
 
 [target.x86_64-unknown-linux-gnu]
